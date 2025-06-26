@@ -5,11 +5,11 @@ from supabase import create_client, Client
 import streamlit.components.v1 as components
 
 # - - - - - INITIALIZE SUPEBASE CREDENTIALS - - - - ->
-URI = st.secrets['DB']['URI']
-KEY = st.secrets['DB']['KEY']
-BUCKET = st.secrets['DB']['BUCKET_NAME']
-TNAME = st.secrets['DB']['TABLE_NAME']
-COLNAME = st.secrets['DB']['STORE_ID']
+URI = st.secrets['URI']
+KEY = st.secrets['KEY']
+BUCKET = st.secrets['BUCKET_NAME']
+TNAME = st.secrets['TABLE_NAME']
+COLNAME = st.secrets['STORE_ID']
 
 # - - - - - SUPERBASE CLIENT - - - - - - - - - - - ->
 supabase: Client = create_client(URI, KEY)
