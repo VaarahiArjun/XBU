@@ -54,6 +54,7 @@ if btn:
         if response.data and len(response.data) > 0:
             print(response.data)
             if response.data[0]['store_ID'] == StoreName:
+                print(response.data)
                 # - - - - - UPLOAD FILE ONE AFTER ANOTHER - - - - - - ->
                 for i, pdf_file in enumerate(pdf_files):
                     try:
