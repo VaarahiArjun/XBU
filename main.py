@@ -53,8 +53,9 @@ if btn:
         # - - - - - CHECK VALID STORE_ID EXIST IN DB - - - - - - - - ->
         if response.data and len(response.data) > 0:
             print(response.data)
-            if response.data[0].store_ID == StoreName:
-                print(response.data)
+            store_id = response[0]['store_ID']
+            print(store_id)  # Output: VARA7089
+            if store_id == StoreName:
                 # - - - - - UPLOAD FILE ONE AFTER ANOTHER - - - - - - ->
                 for i, pdf_file in enumerate(pdf_files):
                     try:
